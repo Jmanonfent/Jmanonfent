@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pay Result</title>
-</head>
-<body>
-    <h2>Results</h2>
-    <p>Total Hours Worked: {{ hours }}</p>
-    <p>Gross Pay: ${{ "%.2f"|format(gross) }}</p>
-    <p>Net Pay (after {{ "%.2f"|format(tax) }}% tax): ${{ "%.2f"|format(net) }}</p>
-    <a href="/">Back</a>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Results{% endblock %}
+{% block content %}
+
+<h2>Results</h2>
+<p>Total Hours Worked: {{ hours }}</p>
+<p>Gross Pay: ${{ "%.2f"|format(gross) }}</p>
+<p>Net Pay (after {{ "%.2f"|format(tax) }}% tax): ${{ "%.2f"|format(net) }}</p>
+
+<a href="/">Back</a>
+
+{% endblock %}
+
